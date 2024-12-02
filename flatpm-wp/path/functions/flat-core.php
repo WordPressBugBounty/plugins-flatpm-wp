@@ -79,36 +79,38 @@ if( ! function_exists( 'register_post_types_flat_pm' ) ){
 
 if( ! function_exists( 'flat_do_some' ) ){
 	function flat_do_some(){
-		global $license_transient;
+		return true;
 
-		if( $license_transient != '' )
-			return ( $license_transient == 'true' ) ? true : false;
+		// global $license_transient;
 
-		$license_transient = get_transient( 'license_transient' );
+		// if( $license_transient != '' )
+		// 	return ( $license_transient == 'true' ) ? true : false;
 
-		if ( false !== $license_transient )
-			return ( $license_transient == 'true' ) ? true : false;
+		// $license_transient = get_transient( 'license_transient' );
 
-		$args = array(
-			'body' => array(
-				'conva'       => $_SERVER['HTTP_HOST'],
-				'plovr'       => get_option( 'flat_pm_license' ),
-				'admin_email' => get_option( 'admin_email' )
-			),
-			'sslverify' => false
-		);
+		// if ( false !== $license_transient )
+		// 	return ( $license_transient == 'true' ) ? true : false;
 
-		$response = wp_remote_post( 'https://mehanoid.pro/api/license/flatpm/', $args );
+		// $args = array(
+		// 	'body' => array(
+		// 		'conva'       => $_SERVER['HTTP_HOST'],
+		// 		'plovr'       => get_option( 'flat_pm_license' ),
+		// 		'admin_email' => get_option( 'admin_email' )
+		// 	),
+		// 	'sslverify' => false
+		// );
 
-		if ( !is_wp_error( $response ) ) {
-			$license_transient = $response['body'];
-		}else{
-			$license_transient = 'false';
-		}
+		// $response = wp_remote_post( 'https://mehanoid.pro/api/license/flatpm/', $args );
 
-		set_transient( 'license_transient', $license_transient, 60 * 30 );
+		// if ( !is_wp_error( $response ) ) {
+		// 	$license_transient = $response['body'];
+		// }else{
+		// 	$license_transient = 'false';
+		// }
 
-		return ( $license_transient == 'true' ) ? true : false;
+		// set_transient( 'license_transient', $license_transient, 60 * 30 );
+
+		// return ( $license_transient == 'true' ) ? true : false;
 	}
 }
 

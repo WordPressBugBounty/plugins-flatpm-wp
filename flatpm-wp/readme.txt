@@ -3,8 +3,8 @@
 * Donate link: https://mehanoid.pro/flat-pm/
 * Tags: custom code, ad injection, ads plugin, ad rotation, ad manager, ads, adsense, advertising, banner, rotator, ad blocking detection, header code, footer code, banners, adverts, sticky fixed widgets, flatpm, flat pm, flat profit maker
 * Requires at least: 5.9
-* Tested up to: 6.5.2
-* Stable tag: 3.1.17
+* Tested up to: 6.7.1
+* Stable tag: 3.2.0
 * Requires PHP: 5.6
 * License: GPLv3
 * License URI: https://www.gnu.org/licenses/gpl.html
@@ -12,6 +12,7 @@
 
 ## Description ##
 **Flat PM** is an ad management plugin. You might be thinking, "why do I need it?". It's simple: this is the best plugin for organizing ads at a professional level.
+From 12.02.2024 completely FREE!!!
 
 You can compare it with plugins like Advanced Ads, Ad Inserter, believe me, it's nothing compared to FlatPM.
 If you're worried about front-end performance, then the plugin code is written without using jQuery!
@@ -41,7 +42,7 @@ The plugin does not have any restrictions, it is a fully customizable tool.
 * Types of templates and templates.
 
 ### User targeting options: ###
-* GEO: country or city (PRO functionality, paid base of IP addresses is used);
+* GEO: country or city (paid base of IP addresses is used);
 * referrer;
 * Browser;
 * Operating system;
@@ -104,11 +105,15 @@ Install like any other plugin or:
 
 ## Changelog ##
 
+### 3.2.0 ###
+1. Now the plugin is completely FREE!!!
+2. Fix translations.
+
 ### 3.1.17 ###
 1. Bug fix.
 
 ### 3.1.16 ###
-1. Global ab tests for folders. Those you can test entire swathes of advertising. Available for PRO users;
+1. Global ab tests for folders. Those you can test entire swathes of advertising.
 2. Shortcode {{increment}}. Prints a number starting from 1, each call to this shortcode increases the value by one.
 {{increment_1}}, {{increment_2}}, etc. - it is possible to display several separate increments.
 3. For all popups, added the ability to confirm actions by pressing the Enter button.

@@ -2053,13 +2053,16 @@ jQuery( function($){
 			var that = $(this).val();
 
 			if(
+				$('#tab-view > ul.collapsible > li.active').length === 0 &&
 				(
-					that.includes( 'yaContextCb' ) &&
-					( that.includes( 'topAd' ) || that.includes( 'floorAd' ) || that.includes( 'fullscreen' ) ) &&
-					! that.includes( 'feed' )
-				) ||
-				(
-					that.includes( 'metrika' )
+					(
+						that.includes( 'yaContextCb' ) &&
+						( that.includes( 'topAd' ) || that.includes( 'floorAd' ) || that.includes( 'fullscreen' ) ) &&
+						! that.includes( 'feed' )
+					) ||
+					(
+						that.includes( 'metrika' )
+					)
 				)
 			){
 				window.master_rtb_once = true;

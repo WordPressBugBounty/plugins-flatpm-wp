@@ -3,7 +3,7 @@
 Plugin Name: FlatPM – Ad Manager, AdSense and Custom Code
 Plugin URI: https://mehanoid.pro/flat-pm/
 Description: Plugin for displaying ads and interactive content. Popups, GEO, referer, browser, OS, ISP, UTM, A/B tests and more <a href="https://t.me/joinchat/+peZspodMlelhZjIy">Our telegram channel</a>
-Version: 3.1.17
+Version: 3.2.0
 Author: Mehanoid.pro
 Author URI: https://mehanoid.pro/
 Text Domain: flatpm_l10n
@@ -15,12 +15,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
-__( 'FlatPM – Ad Manager, AdSense, Custom Code and more', 'flatpm_l10n' );
-__( 'Plugin for displaying ads and interactive content. Popups, GEO, referer, browser, OS, ISP, UTM, A/B tests and more <a href="https://t.me/joinchat/+peZspodMlelhZjIy">Our telegram channel</a>', 'flatpm_l10n' );
-
-
 define( 'FLATPM_SLUG', dirname( plugin_basename( __FILE__ ) ) );
-define( 'FLATPM_VERSION', '?3.1.17' );
+define( 'FLATPM_VERSION', '?3.2.0' );
 define( 'FLATPM_INT_MAX', PHP_INT_MAX - 100 );
 define( 'FLATPM_URL', plugin_dir_url( __FILE__ ) );
 define( 'FLATPM_DIR', __DIR__ );
@@ -89,7 +85,10 @@ class FlatPM_Obj{
 					'jeg-form-menu-script',
 					'jeg-form-archive-script',
 					'jquery-widgetopts-option-tabs',
-					'ilrcp_panel_select2'
+					'ilrcp_panel_select2',
+					'jquery-modal',
+					'nextgen_first_run_wizard',
+					'ngg_admin_notices'
 				);
 
 				foreach( $deque_js as $js ){
@@ -102,7 +101,8 @@ class FlatPM_Obj{
 					'font-awesome',
 					'jeg-form-builder',
 					'widgetopts-admin-styles',
-					'zmseo'
+					'zmseo',
+					'jquery-modal'
 				);
 
 				foreach( $deque_css as $css ){
