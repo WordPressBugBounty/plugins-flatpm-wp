@@ -4,7 +4,7 @@
 * Tags: custom code, ad injection, ads plugin, ad rotation, ad manager, ads, adsense, advertising, banner, rotator, ad blocking detection, header code, footer code, banners, adverts, sticky fixed widgets, flatpm, flat pm, flat profit maker
 * Requires at least: 5.9
 * Tested up to: 6.7.1
-* Stable tag: 3.2.0
+* Stable tag: 3.2.2
 * Requires PHP: 5.6
 * License: GPLv3
 * License URI: https://www.gnu.org/licenses/gpl.html
@@ -104,6 +104,9 @@ Install like any other plugin or:
 
 
 ## Changelog ##
+
+### 3.2.2 ###
+1. Fix GEO.
 
 ### 3.2.0 ###
 1. Now the plugin is completely FREE!!!
