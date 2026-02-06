@@ -3,7 +3,7 @@
 Plugin Name: FlatPM – Ad Manager, AdSense and Custom Code
 Plugin URI: https://mehanoid.pro/flat-pm/
 Description: Plugin for displaying ads and interactive content. Popups, GEO, referer, browser, OS, ISP, UTM, A/B tests and more <a href="https://t.me/joinchat/+peZspodMlelhZjIy">Our telegram channel</a>
-Version: 3.2.2
+Version: 3.2.3
 Author: Mehanoid.pro
 Author URI: https://mehanoid.pro/
 Text Domain: flatpm_l10n
@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 define( 'FLATPM_SLUG', dirname( plugin_basename( __FILE__ ) ) );
-define( 'FLATPM_VERSION', '?3.2.2' );
+define( 'FLATPM_VERSION', '?3.2.3' );
 define( 'FLATPM_INT_MAX', PHP_INT_MAX - 100 );
 define( 'FLATPM_URL', plugin_dir_url( __FILE__ ) );
 define( 'FLATPM_DIR', __DIR__ );

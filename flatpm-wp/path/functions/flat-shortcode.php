@@ -67,34 +67,41 @@ if( !function_exists( 'flat_pm_shortcode_title' ) ){
 	}
 }
 
-if( !function_exists( 'flat_pm_shortcode_description' ) ){
+if( ! function_exists( 'flat_pm_shortcode_description' ) ){
 	function flat_pm_shortcode_description(){
 		$output = '';
+
 		if( is_singular() ){
-			$id = get_queried_object()->ID;
-			$_aioseop_title = get_post_meta( $id, '_aioseop_title', true );
-			$_yoast_wpseo_metadesc = get_post_meta( $id, '_yoast_wpseo_metadesc', true );
-			$rank_math_description = get_post_meta( $id, 'rank_math_description', true );
+			$object = get_queried_object();
 
-			if( $_aioseop_title ){
-				$output = $_aioseop_title;
+			if( empty( $object->ID ) ){
+				return '';
 			}
 
-			if( $_yoast_wpseo_metadesc ){
-				$output = $_yoast_wpseo_metadesc;
-			}
+			$post_id = (int) $object->ID;
 
-			if( $rank_math_description ){
-				$output = $rank_math_description;
+			$meta_keys = array(
+				'_aioseop_title',
+				'_yoast_wpseo_metadesc',
+				'rank_math_description',
+			);
+
+			foreach( $meta_keys as $meta_key ){
+				$meta_value = get_post_meta( $post_id, $meta_key, true );
+
+				if( ! empty( $meta_value ) ){
+					$output = $meta_value;
+					break;
+				}
 			}
 		}else{
-			$id = get_queried_object()->term_id;
 			if( class_exists( 'WPSEO_Frontend' ) ){
-				$wpseo_object = WPSEO_Frontend::get_instance();
-				$output = sanitize_text_field( $wpseo_object->metadesc( false ) );
+				$wpseo = WPSEO_Frontend::get_instance();
+				$output = $wpseo->metadesc( false );
 			}
 		}
-		return $output;
+
+		return sanitize_text_field( $output );
 	}
 }
 
